@@ -7,3 +7,5 @@ Colaboradores:
 - Osuna L. Rubi G.
 - Rodelo C. Graciela
 - Salcido I. J. Armando
+
+![image](https://user-images.githubusercontent.com/67613023/115496450-e20ea680-a226-11eb-8da4-d944479e1c05.png)
