@@ -9,4 +9,3 @@ Colaboradores:
 - Salcido I. J. Armando
 
 ![image](https://user-images.githubusercontent.com/67613023/115496450-e20ea680-a226-11eb-8da4-d944479e1c05.png)
-![image](https://user-images.githubusercontent.com/67613023/115497094-3b2b0a00-a228-11eb-86ae-e5d07407d7b9.png)
