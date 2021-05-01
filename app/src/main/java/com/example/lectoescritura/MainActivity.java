@@ -27,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn_next(View view) {
     }
-
+    // Método para el botón about -- i
     public void btn_about(View view) {
-
-
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.about_info, null);
+
         int width = LinearLayout.LayoutParams.WRAP_CONTENT, height = width;
         boolean focused = true;
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focused);
