@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.app.DirectAction;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_next(View view) {
+        Intent next = new Intent(this,HistoriaChal.class);
+        startActivity(next);
     }
     // Método para el botón about -- i
     public void btn_about(View view) {
