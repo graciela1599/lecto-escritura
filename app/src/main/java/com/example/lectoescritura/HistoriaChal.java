@@ -4,14 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
 
 public class HistoriaChal extends AppCompatActivity {
-
+    Window window;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historia_chal);
+
+        if(Build.VERSION.SDK_INT >=21){
+            window=this.getWindow();
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
         MotionLayout layout = (MotionLayout) findViewById(R.id.primerPartV);
         layout.addTransitionListener(new MotionLayout.TransitionListener() {
             @Override
