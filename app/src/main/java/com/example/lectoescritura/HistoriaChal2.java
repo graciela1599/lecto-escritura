@@ -33,7 +33,7 @@ public class HistoriaChal2 extends AppCompatActivity {
 
             @Override
             public void onTransitionCompleted(MotionLayout motionLayout, int i) {
-                Intent sig = new Intent(HistoriaChal2.this,MainActivity.class);
+                Intent sig = new Intent(HistoriaChal2.this,MenuMapa.class);
                 startActivity(sig);
             }
 

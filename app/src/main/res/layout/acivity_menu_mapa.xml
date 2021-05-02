@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/mar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/islavolcan"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islavolcan"
+                android:onClick="btn_islavolcan"/>
+
+            <ImageView
+                android:id="@+id/islaluna"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islaluna"
+                android:onClick="btn_next"
+                android:layout_below="@+id/islavolcan"
+                android:layout_toRightOf="@+id/islavolcan" />
+
+            <ImageView
+                android:id="@+id/islasgemelas"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islasgemelas"
+                android:onClick="btn_next"
+                android:layout_below="@+id/islaluna" />
+
+            <ImageView
+                android:id="@+id/islafaro"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islafaro"
+                android:onClick="btn_next"
+                android:layout_below="@+id/islasgemelas"
+                android:layout_toRightOf="@+id/islasgemelas" />
+
+            <ImageView
+                android:id="@+id/islasirena"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islasirena"
+                android:onClick="btn_next"
+                android:layout_below="@+id/islafaro" />
+
+            <ImageView
+                android:id="@+id/islamultiple"
+                android:layout_width="221dp"
+                android:layout_height="230dp"
+                android:background="@drawable/islamultiple"
+                android:onClick="btn_next"
+                android:layout_below="@+id/islasirena"
+                android:layout_toRightOf="@+id/islasirena" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
