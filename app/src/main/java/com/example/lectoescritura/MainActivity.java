@@ -29,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_next(View view) {
-        Intent next = new Intent(this,HistoriaChal.class);
+        /*Intent next = new Intent(this,HistoriaChal.class);
+        startActivity(next);*/
+
+        Intent next = new Intent(this,MenuMapa.class);
         startActivity(next);
     }
     // Método para el botón about -- i

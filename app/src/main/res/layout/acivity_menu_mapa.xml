@@ -7,69 +7,158 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fillViewport="true"
-        tools:ignore="MissingConstraints">
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout5"
-            android:paddingLeft="10dp"
+        <ScrollView
+            android:id="@+id/scrollView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-49dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginBottom="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/islavolcan"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="174dp"
+                    android:layout_marginRight="174dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/btn_islavolcan"
+                    android:onClick="btn_islavolcan"
+                    app:layout_constraintBottom_toTopOf="@+id/islaluna"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.076"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/islaluna"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/btn_islaluna"
+                    android:onClick="btn_islaluna"
+                    app:layout_constraintBottom_toTopOf="@+id/islasgemelas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/islavolcan" />
+
+                <ImageView
+                    android:id="@+id/islasgemelas"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="190dp"
+                    android:layout_marginRight="190dp"
+                    android:background="@drawable/btn_islagemelas"
+                    android:onClick="btn_islagemelas"
+                    app:layout_constraintBottom_toTopOf="@+id/islafaro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.306"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/islaluna" />
+
+                <ImageView
+                    android:id="@+id/islafaro"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="178dp"
+                    android:layout_marginLeft="178dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_islafaro"
+                    android:onClick="btn_islafaro"
+                    app:layout_constraintBottom_toTopOf="@+id/islasirena"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.689"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/islasgemelas" />
+
+                <ImageView
+                    android:id="@+id/islasirena"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="174dp"
+                    android:layout_marginRight="174dp"
+                    android:layout_marginBottom="190dp"
+                    android:background="@drawable/btn_islasirena"
+                    android:onClick="btn_islasirena"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/islafaro" />
+
+                <ImageView
+                    android:id="@+id/islamultiple"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="174dp"
+                    android:layout_marginLeft="174dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_islamultiple"
+                    android:onClick="btn_islamultiple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/islasirena"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="413dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="2dp"
+
+        android:layout_marginLeft="2dp"
+        android:background="#4291CD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/islavolcan"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islavolcan"
-                android:onClick="btn_islavolcan"/>
-
-            <ImageView
-                android:id="@+id/islaluna"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islaluna"
-                android:onClick="btn_next"
-                android:layout_below="@+id/islavolcan"
-                android:layout_toRightOf="@+id/islavolcan" />
-
-            <ImageView
-                android:id="@+id/islasgemelas"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islasgemelas"
-                android:onClick="btn_next"
-                android:layout_below="@+id/islaluna" />
-
-            <ImageView
-                android:id="@+id/islafaro"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islafaro"
-                android:onClick="btn_next"
-                android:layout_below="@+id/islasgemelas"
-                android:layout_toRightOf="@+id/islasgemelas" />
-
-            <ImageView
-                android:id="@+id/islasirena"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islasirena"
-                android:onClick="btn_next"
-                android:layout_below="@+id/islafaro" />
-
-            <ImageView
-                android:id="@+id/islamultiple"
-                android:layout_width="221dp"
-                android:layout_height="230dp"
-                android:background="@drawable/islamultiple"
-                android:onClick="btn_next"
-                android:layout_below="@+id/islasirena"
-                android:layout_toRightOf="@+id/islasirena" />
-        </RelativeLayout>
-    </ScrollView>
-
-
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_back"
+                android:onClick="btn_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>
