@@ -4,8 +4,12 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -22,9 +26,9 @@ public class Nivel3 extends AppCompatActivity {
     ArrayList<TextView> letras;
     ArrayList<ArrayList<String>>  let_ejercicio;
     ImageView imgEjercicio;
+    TextView palabra;
     String letraFaltante = "";
     Window window;
-    ArrayList<ConstraintLayout> palabra; // Aquí iran las letras faltantes
     String[] palabras_ejercicio = {"pie","sol","luna"};
     int actividad_nivel3 = 0;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -38,7 +42,7 @@ public class Nivel3 extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.mar));
         }
         imgEjercicio = (ImageView) findViewById(R.id.imgEjercicio);
-
+        palabra = (TextView) findViewById(R.id.palabra);
         imagenes = new ArrayList<Integer>();
         imagenes.add(R.drawable.pie);
         imagenes.add(R.drawable.sol);
@@ -58,11 +62,7 @@ public class Nivel3 extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void btn_actividad(View view) {
 
-        TextView a = findViewById(R.id.txtInstrucciones);
 
-        char q = 'a',z = 'z';
-
-        a.setText(Character.getNumericValue(q)+ "  - " + Character.getNumericValue(z));
 
         switch (view.getId()){
             case R.id.btn_activity:
@@ -86,8 +86,6 @@ public class Nivel3 extends AppCompatActivity {
             letra.setText(let_ejercicio.get(actividad_nivel3).get(a));
             a++;
         }
-        TextView no = findViewById(R.id.txtInstrucciones);
-        no.setText(letraFaltante);
 
         actividad_nivel3++;
     }
@@ -100,8 +98,6 @@ public class Nivel3 extends AppCompatActivity {
 
         let_ejercicio.add(new ArrayList<String>());
         let_ejercicio.get(actividad_nivel3).add(letraFaltante);
-
-        elimina_panels();
 
         for(int it = 0; it < 2; it++) {
             char letra_random = letraRandom();
@@ -116,22 +112,63 @@ public class Nivel3 extends AppCompatActivity {
         }
         Collections.shuffle(let_ejercicio.get(actividad_nivel3), new Random(seed));
 
-        ConstraintLayout letras = findViewById(R.id.letras_palabra);
-        letras.addView(new TextView(this));
-
-
-    }
-    private void elimina_panels(){
-        for(int i = 0; i<palabra.size();i++){
-            palabra.remove(i);
+        String textView = "";
+        for(int i = 0;i<palabras_ejercicio[actividad_nivel3].length();i++){
+            if(letraFaltante.equals(Character.toString(palabras_ejercicio[actividad_nivel3].charAt(i)))) {
+                textView += " _ ";
+            }else{
+                textView += " "+Character.toString(palabras_ejercicio[actividad_nivel3].charAt(i));
+            }
         }
+
+        palabra.setText(textView);
+
+
+
     }
+    String texto;
+    String error = "_";
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void validar_completado(String letraEscogida){
+        texto = palabra.getText().toString();
+
         if(letraEscogida.equals(letraFaltante)){
-            actividad_subnivel();
+
+            texto = texto.replace(error,letraEscogida);
+
+            new CountDownTimer(2000, 1000) {
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    // do something after 1s
+                    palabra.setText(texto);
+                }
+
+                @Override
+                public void onFinish() {
+                    // do something end times 5s
+                    if(actividad_nivel3==palabras_ejercicio.length){
+                        Intent termino = new Intent(Nivel3.this, Nivel1_Terminado.class);
+                        startActivity(termino);
+                    }else{
+                        actividad_subnivel();
+                        error = "_";
+                    }
+                }
+
+            }.start();
+
+
         }else{
-            // error message
+            texto = palabra.getText().toString();
+
+
+
+            texto = texto.replace(error,letraEscogida);
+            error = letraEscogida;
+            palabra.setText(texto);
+
+
         }
     }
 

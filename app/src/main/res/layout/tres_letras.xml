@@ -31,14 +31,14 @@
         android:id="@+id/a0"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:text="a"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="10dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="34dp"
-        android:textColor="@color/black"
+        android:background="@drawable/letra"
         android:fontFamily="casual"
-        android:background="@drawable/letra"/>
+        android:gravity="center"
+        android:text="a"
+        android:textColor="#930000"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
