@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mar"
+    tools:context=".Nivel1_Ejercicio3">
+
+    <TextView
+        android:id="@+id/tvEncabezadoRosa"
+        android:layout_width="409dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="72dp"
+        android:background="#CDDC39"
+        android:contentDescription="@string/txtEncabezado"
+        android:gravity="start"
+        android:text="@string/txtEncabezado"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivRosa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRosa"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:contentDescription="@string/ivrosa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoRosa"
+        app:srcCompat="@drawable/rosa" />
+
+    <TextView
+        android:id="@+id/tvRosa"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:background="#CDDC39"
+        android:text="@string/tvRosa"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivRosa" />
+
+    <TextView
+        android:id="@+id/txOpcionRosa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#FF5722"
+        android:gravity="center"
+        android:text="@string/txtOpcion"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRosa" />
+
+    <ImageView
+        android:id="@+id/ivRopa"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:contentDescription="@string/ivropa"
+        app:layout_constraintEnd_toStartOf="@+id/ivNave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txOpcionRosa"
+        app:srcCompat="@drawable/ropa" />
+
+    <Button
+        android:id="@+id/btnRopa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:onClick="btnRopa"
+        android:text="@string/btnRopa"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FF5722"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRopa" />
+
+    <ImageView
+        android:id="@+id/ivNave"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:contentDescription="@string/ivNave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivRopa"
+        app:layout_constraintTop_toBottomOf="@+id/txOpcionRosa"
+        app:srcCompat="@drawable/nave" />
+
+    <Button
+        android:id="@+id/btnNave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="btnNave"
+        android:text="@string/btnNave"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FF5722"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRopa"
+        app:layout_constraintTop_toBottomOf="@+id/ivNave" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

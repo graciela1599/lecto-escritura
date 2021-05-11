@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">lectoescritura</string>
+    <string name="ivMano">Mano</string>
+    <string name="btnSol">Sol</string>
+    <string name="btnMama">Mamá</string>
+    <string name="txtEncabezado">Pulse en la palabra que inicia igual que en la del dibujo</string>
+    <string name="ivMama">ivMama</string>
+    <string name="txtMano">Mano</string>
+    <string name="txtOpcion">¿Cuál es la imagen correcta?</string>
+    <string name="ivSol">ivSol</string>
+    <string name="ivchalrujosad">ivChalrujoSad</string>
+    <string name="btnback">btnBack</string>
+    <string name="tvLuna">Luna</string>
+    <string name="ivluna">ivLuna</string>
+    <string name="ivpapa">ivPapa</string>
+    <string name="ivluneta">ivLuneta</string>
+    <string name="btnPapa">Papá</string>
+    <string name="btnLuneta">Luneta</string>
+    <string name="ivrosa">ivRosa</string>
+    <string name="tvRosa">Rosa</string>
+    <string name="btnRopa">Ropa</string>
+    <string name="btnNave">Nave</string>
+    <string name="ivropa">ivRopa</string>
+    <string name="ivNave">ivNave</string>
 </resources>
