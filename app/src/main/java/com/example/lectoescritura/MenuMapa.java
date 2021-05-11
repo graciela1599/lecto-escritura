@@ -24,7 +24,8 @@ public class MenuMapa extends AppCompatActivity {
 
 
     public void btn_islavolcan(View view) {
-
+    Intent i = new Intent(this,Nivel1_Ejercicio1.class);
+    startActivity(i);
     }
     public void btn_back(View view) {
         Intent principal = new Intent(this,MainActivity.class);
