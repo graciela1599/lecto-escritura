@@ -39,6 +39,8 @@ public class MenuMapa extends AppCompatActivity {
     }
 
     public void btn_islasirena(View view) {
+        Intent nivel3 = new Intent(this, Nivel3.class);
+        startActivity(nivel3);
     }
 
     public void btn_islamultiple(View view) {
