@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/ivBack"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="159dp"
+        android:layout_height="159dp"
         android:layout_marginStart="103dp"
         android:layout_marginLeft="103dp"
         android:layout_marginTop="12dp"
@@ -34,8 +34,7 @@
         android:onClick="Error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivChalrujoSad"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/btn_retry" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -29,7 +30,7 @@ public class Nivel3 extends AppCompatActivity {
     TextView palabra;
     String letraFaltante = "";
     Window window;
-    String[] palabras_ejercicio = {"pie","sol","luna"};
+    String[] palabras_ejercicio = {"pie","sol","luna", "rosa"};
     int actividad_nivel3 = 0;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -47,6 +48,7 @@ public class Nivel3 extends AppCompatActivity {
         imagenes.add(R.drawable.pie);
         imagenes.add(R.drawable.sol);
         imagenes.add(R.drawable.luna);
+        imagenes.add(R.drawable.rosa);
 
         letras = new ArrayList<TextView>();
         letras.add(findViewById(R.id.btn_activity).findViewById(R.id.txt_Letra));
@@ -55,15 +57,12 @@ public class Nivel3 extends AppCompatActivity {
 
        let_ejercicio = new  ArrayList<ArrayList<String>>();
 
-
          actividad_subnivel();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public void btn_actividad(View view) {
-
-
-
+        palabra.setTextColor(Color.BLACK);
         switch (view.getId()){
             case R.id.btn_activity:
                 validar_completado(letras.get(0).getText().toString());
@@ -136,21 +135,24 @@ public class Nivel3 extends AppCompatActivity {
 
             texto = texto.replace(error,letraEscogida);
 
-            new CountDownTimer(2000, 1000) {
+            new CountDownTimer(1500, 500) {
 
                 @Override
                 public void onTick(long millisUntilFinished) {
                     // do something after 1s
                     palabra.setText(texto);
+                    palabra.setTextColor(Color.GREEN);
                 }
 
                 @Override
                 public void onFinish() {
+                    palabra.setTextColor(Color.BLACK);
                     // do something end times 5s
                     if(actividad_nivel3==palabras_ejercicio.length){
                         Intent termino = new Intent(Nivel3.this, Nivel1_Terminado.class);
                         startActivity(termino);
                     }else{
+
                         actividad_subnivel();
                         error = "_";
                     }
@@ -160,14 +162,16 @@ public class Nivel3 extends AppCompatActivity {
 
 
         }else{
+            // En caso de presentar un error
             texto = palabra.getText().toString();
-
-
 
             texto = texto.replace(error,letraEscogida);
             error = letraEscogida;
             palabra.setText(texto);
-
+            palabra.setTextColor(Color.RED);
+            // Se despliega pantalla de error
+            Intent error = new Intent(this, Nivel1_Error.class);
+            startActivity(error);
 
         }
     }
