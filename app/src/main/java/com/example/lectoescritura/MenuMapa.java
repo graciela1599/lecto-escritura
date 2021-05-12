@@ -37,6 +37,8 @@ public class MenuMapa extends AppCompatActivity {
     }
 
     public void btn_islafaro(View view) {
+        Intent nivel4 = new Intent(this, Nivel4.class);
+        startActivity(nivel4);
     }
 
     public void btn_islasirena(View view) {
