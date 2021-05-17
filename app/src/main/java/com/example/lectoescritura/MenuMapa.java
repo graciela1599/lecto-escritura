@@ -34,6 +34,8 @@ public class MenuMapa extends AppCompatActivity {
 
     // Use mGestureThreshold as a distance in pixels...
     public void btn_islagemelas(View view) {
+        Intent nivel2 = new Intent(this, Activity_nivel2_ejercicio1.class);
+        startActivity(nivel2);
     }
 
     public void btn_islafaro(View view) {
@@ -47,6 +49,8 @@ public class MenuMapa extends AppCompatActivity {
     }
 
     public void btn_islamultiple(View view) {
+        Intent memorama = new Intent(this, Memorama.class);
+        startActivity(memorama);
     }
 
     public void btn_islaluna(View view) {

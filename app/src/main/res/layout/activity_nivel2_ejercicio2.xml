@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nombre_nivel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="432dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/instruccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            android:text="Selecciona la imagen que corresponde con el nombre."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="294dp"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="412dp">
+
+            <ImageView
+                android:id="@+id/lima"
+                android:layout_width="151dp"
+                android:layout_height="139dp"
+                app:srcCompat="@drawable/nave"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="91dp" />
+
+            <ImageView
+                android:id="@+id/mapa"
+                android:layout_width="148dp"
+                android:layout_height="142dp"
+                app:srcCompat="@drawable/mano"
+                tools:layout_editor_absoluteX="210dp"
+                tools:layout_editor_absoluteY="51dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="161dp">
+
+            <ImageView
+                android:id="@+id/lima_nombre"
+                android:layout_width="364dp"
+                android:layout_height="177dp"
+                app:srcCompat="@drawable/mano_nombre"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="48dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
