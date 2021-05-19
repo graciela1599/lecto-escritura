@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         /*Intent next = new Intent(this,HistoriaChal.class);
         startActivity(next);*/
 
-        Intent next = new Intent(this,Activity_nivel2_ejercicio1.class);
+        Intent next = new Intent(this,MenuMapa.class);
         startActivity(next);
     }
     // Método para el botón about -- i
