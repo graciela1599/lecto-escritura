@@ -13,7 +13,7 @@ public class Nivel1_Ejercicio2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivel1__ejercicio2);
     }
-    public void btnLuneta(View view){
+    public void btnLupa(View view){
         Intent i = new Intent(this,Nivel1_Ejercicio3.class);
         startActivity(i);
     }
