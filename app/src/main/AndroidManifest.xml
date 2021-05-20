@@ -23,6 +23,9 @@
         <activity android:name=".Activity_nivel2_ejercicio3" />
         <activity android:name=".HistoriaChal2" />
         <activity android:name=".HistoriaChal" />
+        <activity android:name=".Nivel5_Ejercicio1" />
+        <activity android:name=".Nivel5_Ejercicio2" />
+        <activity android:name=".Nivel5_Ejercicio3" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

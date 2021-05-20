@@ -54,5 +54,7 @@ public class MenuMapa extends AppCompatActivity {
     }
 
     public void btn_islaluna(View view) {
+        Intent nivel5 = new Intent(this, Nivel5_Ejercicio1.class);
+        startActivity(nivel5);
     }
 }

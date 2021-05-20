@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nivel5_Ejercicio2">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:background="@color/mar"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+
+                <TextView
+                    android:id="@+id/textDescripcionNivel3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:background="#FD8BE5"
+                    android:gravity="center"
+                    android:text="Selecciona el nombre correcto de la imagen"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageViewSol"
+                    android:layout_width="match_parent"
+                    android:layout_height="207dp"
+                    app:srcCompat="@drawable/img_sol" />
+
+                <Button
+                    android:id="@+id/btnMano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:cursorVisible="false"
+                    android:text="mano"
+                    android:onClick="onClick"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:backgroundTint="#F8FF2E" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btnMama"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        android:text="mamá"
+                        android:onClick="onClick"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:backgroundTint="#F8FF2E" />
+
+                    <Button
+                        android:id="@+id/btnSol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        android:onClick="onClick"
+                        android:text="sol"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        app:backgroundTint="#F8FF2E" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
