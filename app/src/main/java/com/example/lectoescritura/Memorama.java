@@ -40,7 +40,6 @@ public class Memorama extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.memorama);
-
         init();
     }
 
@@ -121,6 +120,8 @@ public class Memorama extends Activity{
                 R.drawable.mano_nombre,
                 R.drawable.lupa,
                 R.drawable.lupa_nombre,
+                R.drawable.mama,
+                R.drawable.mama_nombre
         };
         fondo= R.drawable.signo;
     }

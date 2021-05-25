@@ -11,15 +11,15 @@ public class Activity_nivel2_ejercicio1 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nivel2_ejercicio1);
+        setContentView(R.layout.nivel2_ejercicio1);
     }
-    public void mama(View view){
-        Intent i = new Intent(this,Nivel1_Error.class);
+    public void bMama(View view){
+        Intent i = new Intent(this,Activity_nivel2_ejercicio2.class);
         startActivity(i);
 
     }
-    public void nena(View view){
-        Intent i = new Intent(this,Activity_nivel2_ejercicio1.class);
+    public void btnError(View view){
+        Intent i = new Intent(this,Nivel1_Error.class);
         startActivity(i);
 
     }
