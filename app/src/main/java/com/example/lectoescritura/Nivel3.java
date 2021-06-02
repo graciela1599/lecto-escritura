@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -32,11 +33,17 @@ public class Nivel3 extends AppCompatActivity {
     Window window;
     String[] palabras_ejercicio = {"pie","sol","luna", "rosa"};
     int actividad_nivel3 = 0;
+    MediaPlayer player;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivel3);
+
+        player = MediaPlayer.create(this, R.raw.act5);
+        player.start();
+        player.setVolume(0.8f, 0.8f);
 
         if(Build.VERSION.SDK_INT >=21){
             window=this.getWindow();
@@ -180,4 +187,9 @@ public class Nivel3 extends AppCompatActivity {
         int rnd = (int)(Math.random()*('z'-'a'))+'a';
         return (char)rnd;
     }
+
+    public void btnPlay(View view){
+        player.start();
+    }
+
 }

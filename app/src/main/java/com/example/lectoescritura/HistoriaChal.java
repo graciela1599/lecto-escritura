@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
@@ -14,6 +15,11 @@ public class HistoriaChal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historia_chal);
+
+        MediaPlayer player = MediaPlayer.create(this, R.raw.mainsong);
+        player.setLooping(true);
+        player.start();
+        player.setVolume(0.4f, 0.4f);
 
         if(Build.VERSION.SDK_INT >=21){
             window=this.getWindow();

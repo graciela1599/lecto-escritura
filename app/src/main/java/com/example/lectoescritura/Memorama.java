@@ -107,28 +107,21 @@ public class Memorama extends Activity{
     private void cargarImagenes(){
         imagenes =new int[]{
                 R.drawable.lima,
-                R.drawable.lima_nombre,
                 R.drawable.nena,
-                R.drawable.nena_nombre,
                 R.drawable.ropa,
-                R.drawable.ropa_nombre,
                 R.drawable.sol,
-                R.drawable.sol_nombre,
                 R.drawable.rosa,
-                R.drawable.rosa_nombre,
                 R.drawable.mano,
-                R.drawable.mano_nombre,
                 R.drawable.lupa,
-                R.drawable.lupa_nombre,
-                R.drawable.mama,
-                R.drawable.mama_nombre
+                R.drawable.mama
+
         };
         fondo= R.drawable.signo;
     }
     private  ArrayList<Integer> barajear(int longitud){
         ArrayList<Integer> result= new ArrayList<Integer>();
-        for (int i =0; i<longitud; i++){
-            result.add(i);
+        for (int i =0; i<longitud*2; i++){
+            result.add(i%longitud);
         }
         Collections.shuffle(result);
 
@@ -148,33 +141,33 @@ public class Memorama extends Activity{
             imgb.setImageResource(imagenes[arrayDesordenado.get(i)]);
             imgb.setEnabled(false);
             numeroSegundo = arrayDesordenado.get(i);
-            if(numeroPrimero==(numeroSegundo-1)){
+            if(numeroPrimero==numeroSegundo){
                 primero=null;
                 bloqueo=false;
                 aciertos++;
                 puntuacion++;
                 textoPuntuacion.setText("Puntuacion: "+puntuacion);
-                if(aciertos==(imagenes.length/2)){
+                if(aciertos==(imagenes.length)){
                     Toast toast= Toast.makeText(getApplicationContext(), "Has ganado!!!",Toast.LENGTH_LONG);
                     toast.show();
                     Intent memorama = new Intent(this, Nivel1_Terminado.class);
                     startActivity(memorama);
                 }
                 else{
-                   handler.postDelayed(new Runnable(){
-                       @Override
-                       public void run() {
-                           primero.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                           primero.setImageResource(fondo);
-                           primero.setEnabled(true);
-                           imgb.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                           imgb.setImageResource(fondo);
-                           imgb.setEnabled(true);
-                           bloqueo=false;
-                           primero=null;
-                           textoPuntuacion.setText("Puntuacion: "+puntuacion);
-                       }
-                   },2000);
+                    handler.postDelayed(new Runnable(){
+                        @Override
+                        public void run() {
+                            primero.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                            primero.setImageResource(fondo);
+                            primero.setEnabled(true);
+                            imgb.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                            imgb.setImageResource(fondo);
+                            imgb.setEnabled(true);
+                            bloqueo=false;
+                            primero=null;
+                            textoPuntuacion.setText("Puntuacion: "+puntuacion);
+                        }
+                    },2000);
                 }
             }
         }
@@ -212,4 +205,3 @@ public class Memorama extends Activity{
         }
     }
 }
-

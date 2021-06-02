@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +30,17 @@ public class Nivel4 extends AppCompatActivity {
     ArrayList<Integer> dibujos;
     ArrayList<TextView> txtOcultos;
     HashMap<String, Integer> palabrasImg;
+    MediaPlayer player;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivel4);
+
+        player = MediaPlayer.create(this, R.raw.act3act4);
+        player.start();
+        player.setVolume(0.8f, 0.8f);
 
         palabrasImg = new HashMap<String,Integer>();
         imagenes = new ArrayList<ConstraintLayout>();
@@ -142,4 +148,9 @@ public class Nivel4 extends AppCompatActivity {
         int rnd = (int)(Math.random()*('s'-'c'))+'c';
         return (char)rnd;
     }
+
+    public void btnPlay(View view){
+        player.start();
+    }
+
 }

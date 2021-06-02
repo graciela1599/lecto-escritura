@@ -9,24 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lectoescritura">
-        <activity android:name=".Nivel4"></activity>
-        <activity android:name=".Nivel3" />
-        <activity android:name=".Nivel1_Terminado" />
-        <activity android:name=".Nivel1_Ejercicio3" />
-        <activity android:name=".Nivel1_Error" />
-        <activity android:name=".Nivel1_Ejercicio2" />
-        <activity android:name=".Nivel1_Ejercicio1" />
-        <activity android:name=".MenuMapa" />
-        <activity android:name=".Memorama" />
-        <activity android:name=".Activity_nivel2_ejercicio1" />
-        <activity android:name=".Activity_nivel2_ejercicio2" />
-        <activity android:name=".Activity_nivel2_ejercicio3" />
-        <activity android:name=".HistoriaChal2" />
-        <activity android:name=".HistoriaChal" />
-        <activity android:name=".Nivel5_Ejercicio1" />
-        <activity android:name=".Nivel5_Ejercicio2" />
-        <activity android:name=".Nivel5_Ejercicio3" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Nivel4" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Nivel3"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel1_Terminado"  android:screenOrientation="portrait" />
+        <activity android:name=".Nivel1_Ejercicio3"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel1_Error"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel1_Ejercicio2"  android:screenOrientation="portrait" />
+        <activity android:name=".Nivel1_Ejercicio1"  android:screenOrientation="portrait"/>
+        <activity android:name=".MenuMapa"  android:screenOrientation="portrait"/>
+        <activity android:name=".Memorama"  android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_nivel2_ejercicio1"  android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_nivel2_ejercicio2"  android:screenOrientation="portrait"/>
+        <activity android:name=".Activity_nivel2_ejercicio3"  android:screenOrientation="portrait"/>
+        <activity android:name=".HistoriaChal2"  android:screenOrientation="portrait"/>
+        <activity android:name=".HistoriaChal"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel5_Ejercicio1"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel5_Ejercicio2"  android:screenOrientation="portrait"/>
+        <activity android:name=".Nivel5_Ejercicio3"  android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

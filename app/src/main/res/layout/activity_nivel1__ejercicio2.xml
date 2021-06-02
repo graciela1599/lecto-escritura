@@ -9,22 +9,35 @@
 
     <TextView
         android:id="@+id/tvEncabezadoLuna"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="322dp"
+        android:layout_height="99dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:clickable="false"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="@string/txtEncabezado"
+        android:text="Que imagen de las dos de abajo inicia igual que la siguiente :"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ivLuna"
+        app:layout_constraintBottom_toTopOf="@+id/ivMano"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnPlay1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay"
+        app:layout_constraintEnd_toStartOf="@+id/tvEncabezadoLuna"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivLuna"
@@ -33,7 +46,6 @@
         android:layout_marginTop="20dp"
         android:contentDescription="@string/ivluna"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEncabezadoLuna"
         app:srcCompat="@drawable/luna" />
@@ -42,7 +54,7 @@
         android:id="@+id/tvLuna"
         android:layout_width="170dp"
         android:layout_height="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/letra"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
@@ -56,88 +68,114 @@
 
     <TextView
         android:id="@+id/txOpcion3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="@string/txtOpcion"
+        android:text="Selecciona la imagen correcta :"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLuna" />
 
     <ImageView
-        android:id="@+id/ivPapa"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:contentDescription="@string/ivpapa"
-        app:layout_constraintEnd_toStartOf="@+id/ivLupa"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txOpcion3"
-        app:srcCompat="@drawable/papa" />
+        android:id="@+id/btnPlay1_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="385dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay2"
+        app:layout_constraintEnd_toStartOf="@+id/txOpcion3"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivLupa"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:contentDescription="ivLupa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivPapa"
-        app:layout_constraintTop_toBottomOf="@+id/txOpcion3"
-        app:srcCompat="@drawable/lupa" />
-
-    <TextView
-        android:id="@+id/btnPapa"
-        android:layout_width="150dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/letra"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="230dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:onClick="btnPapa"
-        android:text="@string/btnPapa"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnLupa"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPapa"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintTop_toBottomOf="@+id/txOpcion3">
 
-    <TextView
-        android:id="@+id/btnLupa"
+        <ImageView
+            android:id="@+id/ivPapa"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="ivPapa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/papa" />
+
+        <TextView
+            android:id="@+id/btnPapa"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/letra"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Papá"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPapa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="150dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:background="@drawable/letra"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="230dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:onClick="btnLupa"
-        android:text="Lupa"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnPapa"
-        app:layout_constraintTop_toBottomOf="@+id/ivLupa" />
+        app:layout_constraintTop_toBottomOf="@+id/txOpcion3">
+
+        <ImageView
+            android:id="@+id/ivLupa"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lupa"  />
+
+        <TextView
+            android:id="@+id/btnLupa"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/letra"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Lupa"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLupa" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.DirectAction;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -26,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MediaPlayer player = MediaPlayer.create(this, R.raw.mainsong);
+        player.setLooping(true);
+        player.start();
+        player.setVolume(0.4f, 0.4f);
     }
 
     public void btn_next(View view) {
-        /*Intent next = new Intent(this,HistoriaChal.class);
-        startActivity(next);*/
-
-        Intent next = new Intent(this,MenuMapa.class);
+        Intent next = new Intent(this,HistoriaChal.class);
         startActivity(next);
     }
     // Método para el botón about -- i

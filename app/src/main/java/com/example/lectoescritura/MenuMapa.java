@@ -3,6 +3,7 @@ package com.example.lectoescritura;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +17,18 @@ public class MenuMapa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acivity_menu_mapa);
+
+        MediaPlayer player = MediaPlayer.create(this, R.raw.mainsong);
+        player.setLooping(true);
+        player.start();
+        player.setVolume(0.4f, 0.4f);
+
         if(Build.VERSION.SDK_INT >=21){
             window=this.getWindow();
             window.setStatusBarColor(this.getResources().getColor(R.color.mar));
         }
-    }
 
+    }
 
     public void btn_islavolcan(View view) {
     Intent i = new Intent(this,Nivel1_Ejercicio1.class);

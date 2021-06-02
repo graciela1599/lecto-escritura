@@ -9,20 +9,34 @@
 
     <TextView
         android:id="@+id/tvEncabezado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="322dp"
+        android:layout_height="99dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:clickable="false"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="@string/txtEncabezado"
+        android:text="Que imagen de las dos de abajo inicia igual que la siguiente :"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ivMano"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnPlay1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay"
+        app:layout_constraintEnd_toStartOf="@+id/tvEncabezado"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -40,7 +54,7 @@
         android:id="@+id/TvMano"
         android:layout_width="170dp"
         android:layout_height="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/letra"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
@@ -54,89 +68,115 @@
 
     <TextView
         android:id="@+id/txOpcion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="@string/txtOpcion"
+        android:text="Selecciona la imagen correcta :"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvMano" />
 
     <ImageView
-        android:id="@+id/ivMama"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:contentDescription="@string/ivMama"
-        app:layout_constraintEnd_toStartOf="@+id/ivSol"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txOpcion"
-        app:srcCompat="@drawable/mama" />
+        android:id="@+id/btnPlay1_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="385dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay2"
+        app:layout_constraintEnd_toStartOf="@+id/txOpcion"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivSol"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:contentDescription="@string/ivMano"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivMama"
-        app:layout_constraintTop_toBottomOf="@+id/txOpcion"
-        app:srcCompat="@drawable/sol" />
-
-    <TextView
-        android:id="@+id/btnMama"
-        android:layout_width="150dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/letra"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="230dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:onClick="btnMama"
-        android:text="Mamá"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSol"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivMama"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintTop_toBottomOf="@+id/txOpcion">
 
-    <TextView
-        android:id="@+id/btnSol"
+        <ImageView
+            android:id="@+id/ivMama"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/ivMama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mama" />
+
+        <TextView
+            android:id="@+id/btnMama"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/letra"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Mamá"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMama" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="150dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:background="@drawable/letra"
-        android:fontFamily="casual"
-        android:gravity="center_horizontal|center_vertical"
+        android:layout_height="230dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:onClick="btnSol"
-        android:text="@string/btnSol"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMama"
-        app:layout_constraintTop_toBottomOf="@+id/ivSol"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintTop_toBottomOf="@+id/txOpcion">
+
+        <ImageView
+            android:id="@+id/ivSol"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sol" />
+
+        <TextView
+            android:id="@+id/btnSol"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/letra"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/btnSol"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivSol" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

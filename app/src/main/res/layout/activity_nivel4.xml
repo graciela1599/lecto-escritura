@@ -9,19 +9,32 @@
 
     <TextView
         android:id="@+id/txtInstrucciones_n4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="89dp"
+        android:layout_width="299dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="Completa el nombre de la imagen con las letras que faltan"
+        android:text="Selecciona la imagen que corresponda a la siguiente palabra :"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/palabra_nv4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnPlay4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay"
+        app:layout_constraintEnd_toStartOf="@+id/txtInstrucciones_n4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

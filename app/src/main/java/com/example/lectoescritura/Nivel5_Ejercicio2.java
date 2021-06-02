@@ -2,6 +2,7 @@ package com.example.lectoescritura;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,11 +12,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Nivel5_Ejercicio2 extends AppCompatActivity {
 
     Button btn1Sol,btn2Mano,btn3Mama;
+    MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nivel5_ejercicio2);
+
+        player = MediaPlayer.create(this, R.raw.act2);
+        player.start();
+        player.setVolume(0.8f, 0.8f);
 
         btn1Sol = (Button) findViewById(R.id.btnSol);
         btn2Mano = (Button) findViewById(R.id.btnMano);
@@ -39,6 +45,10 @@ public class Nivel5_Ejercicio2 extends AppCompatActivity {
                 btn3Mama.setBackgroundColor(Color.RED);
                 break;
         }
+    }
+
+    public void btnPlay(View view){
+        player.start();
     }
 
 }

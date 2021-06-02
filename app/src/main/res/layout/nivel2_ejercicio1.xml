@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="329dp"
-        android:layout_height="134dp"
+        android:layout_width="288dp"
+        android:layout_height="133dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="50dp"
@@ -19,18 +19,30 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="500dp"
         android:fontFamily="casual"
-        android:text="Selecciona la imagen que corresponde al nombre"
-        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Selecciona la imagen que corresponda a la siguiente palabra :"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintHorizontal_bias="0.841"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.291" />
+
+    <ImageView
+        android:id="@+id/btnPlay2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_play"
+        android:onClick="btnPlay"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -51,10 +63,11 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="134dp"
-        android:layout_height="153dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/mama"
         android:onClick="bMama"
         app:backgroundTint="@color/purple_500"
@@ -67,8 +80,10 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="129dp"
-        android:layout_height="137dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/mano"
         android:clickable="true"
